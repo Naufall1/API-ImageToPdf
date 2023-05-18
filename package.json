@@ -1,0 +1,18 @@
+{
+  "name": "image2pdf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "naufal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "image-size": "^1.0.2",
+    "multer": "^1.4.5-lts.1",
+    "pdf-merger-js": "^4.3.0",
+    "pdfkit": "^0.13.0"
+  }
+}
