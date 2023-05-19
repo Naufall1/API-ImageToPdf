@@ -9,11 +9,14 @@ const port = 3000;
 function md5(content) {
     return createHash('md5').update(content).digest('hex')
 }
-
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 async function Convert(fileName, res){
     const PDF = new ImgtoPdf(fileName);
     const test = await PDF.Convert();
     const filePath = `${__dirname}/media/pdf/${test}`;
+    sleep(100);
     res.sendFile(filePath);
     return test[0];
 }

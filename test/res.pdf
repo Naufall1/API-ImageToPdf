@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Error: ENOENT: no such file or directory, stat &#39;/opt/API/API-ImageToPdf/src/media/pdf/1684502873.114.pdf&#39;</pre>
+</body>
+</html>
