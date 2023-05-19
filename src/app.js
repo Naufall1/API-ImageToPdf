@@ -3,21 +3,21 @@ const multer = require('multer');
 const { createHash } = require('node:crypto');
 const ImgtoPdf = require('./img2pdf')
 const app = express();
+const path = require('path');
 const port = 3000;
 
 
 function md5(content) {
     return createHash('md5').update(content).digest('hex')
 }
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
+
 async function Convert(fileName, res){
     const PDF = new ImgtoPdf(fileName);
     const test = await PDF.Convert();
-    const filePath = `${__dirname}/media/pdf/${test}`;
-    sleep(100);
-    res.sendFile(filePath);
+    const filePath = `./media/pdf/${test}`;
+    let absolutePath = path.resolve(filePath);
+    console.log(absolutePath);
+    res.sendFile(absolutePath);
     return test[0];
 }
 

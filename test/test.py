@@ -1,6 +1,7 @@
 import requests
 
-url = 'http://10.10.10.19:4000/api/img2pdf'
+# url = 'http://10.10.10.19:4000/api/img2pdf'
+url = 'http://localhost:3000/api/img2pdf'
 
 file_path = 'test.jpeg'
 
